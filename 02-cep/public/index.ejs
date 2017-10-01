@@ -1,0 +1,73 @@
+<div class="mensagem"></div>
+
+<form class="form-inline">
+    <div class="form-group">
+        <label for="cep">CEP</label>
+        <input type="text" 
+            autofocus class="form-control" 
+            id="cep" name="cep" maxlength="8" onkeypress="return digita(event);">
+             <!-- value="00000000"-->
+    </div>
+    <button type="reset" class="btn btn-default remove">
+        <span class="glyphicon glyphicon-remove"></span>
+    </button>
+    <button type="submit" class="btn btn-default">
+        <span class="glyphicon glyphicon-search"></span>
+    </button>
+
+</form>
+
+<div id="resultado">
+
+</div>
+
+<script id="template" type="text/x-handlebars-template">
+        <table  class="table">
+            <tbody>
+                <tr>
+                    <td>CEP</td>
+                    <td>{{cep}}</td>
+                </tr>
+                <tr>
+                    <td>Logradouro</td>
+                    <td>{{logradouro}}</td>
+                </tr>
+                <tr>
+                    <td>Complemento</td>
+                    <td>{{complemento}}</td>
+                </tr>
+                <tr>
+                    <td>Bairro</td>
+                    <td>{{bairro}}</td>
+                </tr>
+                <tr>
+                    <td>Localidade</td>
+                    <td>{{localidade}}</td>
+                </tr>
+                <tr>
+                    <td>UF</td>
+                    <td>{{uf}}</td>
+                </tr>
+                <tr>
+                    <td>Unidade</td>
+                    <td>{{unidade}}</td>
+                </tr>
+                <tr>
+                    <td>IBGE</td>
+                    <td>{{ibge}}</td>
+                </tr>
+                <tr>
+                    <td>gia</td>
+                    <td>{{gia}}</td>
+                </tr>
+            </tbody>
+        </table>   
+</script>
+<script id="errocep" type="text/x-handlebars-template">
+    <div class="alert alert-danger errocep" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span> {{mensagem}}
+    </div>
+</script>
+
+<script src="js/index.js"></script>

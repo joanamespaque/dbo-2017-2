@@ -1,0 +1,33 @@
+<form class="form-inline">
+    <label for="cep">Digite ou cole seu texto aqui:</label><br>
+    <div class="form-group">
+        <textarea class="form-control" name="texto" id="texto" cols="80" rows="10" autofocus></textarea>
+        <div>
+            <button type="reset" class="btn btn-default remove">
+                <span class="glyphicon glyphicon-remove"></span>
+            </button>       
+        </div>
+    </div>
+
+</form>
+<div>
+    <h4>Palavra Selecionada:<span></span></h4>
+    <div class="palavra">
+        <script id="template" type="text/x-handlebars-template">
+            <div>
+                <div class="palavra">
+
+                </div>
+            </div>
+        </script>
+    </div>
+
+</div>
+<div>
+    <h4>Definição:</h4>
+    <div id="resultado">
+        
+    </div>
+</div>
+
+<script src="js/index.js"></script>
